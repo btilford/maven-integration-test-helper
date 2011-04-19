@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>mojo</groupId>
+  <artifactId>test-case</artifactId>
+  <version>99999999</version>
+  <packaging>jar</packaging>
+  <inceptionYear>2011</inceptionYear>
+  <description></description>
+
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>maven-integration-test-helper</groupId>
+        <artifactId>maven-integration-test-helper</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <configuration/>
+        <executions>
+          <execution>
+            <id>pre</id>
+            <phase>pre-integration-test</phase>
+            <goals>
+              <goal>pre-integration-test</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>post</id>
+            <phase>post-integration-test</phase>
+            <goals>
+              <goal>post-integration-test</goal>
+            </goals>
+          </execution>
+
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
