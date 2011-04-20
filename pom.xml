@@ -109,7 +109,7 @@
           </execution>
         </executions>
         <configuration>
-          <goalPrefix>integration-test</goalPrefix>
+          <goalPrefix>integration-test-helper</goalPrefix>
           <detail>true</detail>
         </configuration>
       </plugin>
@@ -265,7 +265,20 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
+
+    </plugins>
+  </build>
+
+
+  <profiles>
+    <profile>
+      <id>release</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
         <artifactId>maven-gpg-plugin</artifactId>
         <version>1.1</version>
         <executions>
@@ -277,6 +290,23 @@
           </execution>
         </executions>
       </plugin>
-    </plugins>
-  </build>
+          <plugin>
+            <artifactId>maven-release-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>prepare</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>prepare</goal>
+                  <goal>stage</goal>
+                  <goal>perform</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
 </project>

@@ -14,12 +14,20 @@ class ScriptRunner {
 
 
   static void execute(String script, MavenProject project, Log log) {
-    URL preIntegrationScript = getClass().getResource("/$script")
-    Util.withURLStream(preIntegrationScript) {
-
+    String path = project?.build?.testOutputDirectory ?: ""
+    path += "/$script"
+    File scriptFile = new File(path)
+    if(!scriptFile.exists()) {
+      log.warn("Missing script [$path] (ignoring)")
+    } else {
       Binding binding = Util.createBinding(project, log)
-      def engine = Util.createEngine(project)
-      engine.run(preIntegrationScript.toString(), binding)
+      GroovyScriptEngine engine = Util.createEngine(project,log)
+      if(engine == null) {
+        log.error("Unable to start script engine!")
+      } else {
+        log.info("Running $script")
+        engine.run(path, binding)
+      }
     }
   }
 }

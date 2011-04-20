@@ -12,20 +12,6 @@ import org.apache.maven.project.MavenProject
  */
 class Util {
 
-  static void withURLStream(URL url, Closure closure) {
-    InputStream istream = null
-    try {
-      if (url != null) {
-        istream = url.openStream()
-        closure(istream)
-      }
-    } finally {
-      if (istream != null) {
-        istream.close()
-      }
-    }
-  }
-
 
   static Binding createBinding(MavenProject project, Log log) {
     Binding binding = new Binding()
@@ -33,18 +19,26 @@ class Util {
     binding.setVariable("log", log)
     binding.setVariable("properties", project.properties)
     binding.setVariable("profiles", project.activeProfiles)
+    binding.setVariable("project",project)
+
 
     return binding
   }
 
 
-  static GroovyScriptEngine createEngine(MavenProject project) {
-    String[] args = [
-        project.properties.getProperty("build.testOutputDirectory") ?: "",
-        project.properties.getProperty("build.outputDirectory") ?: ""
-    ]
+  static GroovyScriptEngine createEngine(MavenProject project, Log log) {
+    GroovyScriptEngine engine = null
+    if (project == null) {
+      log.error("No project!")
+    } else {
 
-    def engine = new GroovyScriptEngine(args)
+      String[] args = [
+          project?.build?.testOutputDirectory ?: "target/test-classes",
+          project?.build?.outputDirectory ?: "target/classes"
+      ]
+
+      engine = new GroovyScriptEngine(args)
+    }
     return engine
   }
 }
