@@ -1,26 +1,26 @@
 import org.mortbay.jetty.Server
-import org.mortbay.jetty.nio.SelectChannelConnector
 import org.mortbay.jetty.webapp.WebAppContext
 
 log.info("[STARTING] PRE INTEGRATION TEST SETUP")
-log.info("properties: $properties")
-log.info("baseDirectory: ${project.basedir}")
 
-Server server = new Server()
-SelectChannelConnector http = new SelectChannelConnector()
-http.port = 8989
 
-server.addConnector(http)
+Server server = new Server(8989)
 
-WebAppContext ctx = new WebAppContext()
+server.handler = new WebAppContext("${project.basedir}/src/main/webapp", "/")
 
-ctx.classLoader = Thread.currentThread().contextClassLoader
-ctx.contextPath = "/"
-ctx.descriptor = "${project.basedir}/src/main/webapp/WEB-INF/web.xml"
-ctx.resourceBase = "${project.basedir}/src/main/webapp"
+try {
+  project.setContextValue("server", server)
+} catch (ex) {
+  log.error("Maven 2 not supported")
+}
 
-project.setContextValue("server",server)
 
-server.start()
+try {
+  server.start()
+} catch (ex) {
+  log.error(ex.message)
+}
+
 
 log.info("[FINISHED] PRE INTEGRATION TEST SETUP")
+

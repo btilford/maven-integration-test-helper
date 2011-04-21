@@ -17,7 +17,7 @@ if(server.stopped) {
 
 if(server.started) {
   log.info("Jetty is running preparing to shutdown")
-  server.stop()
+//  server.stop()
   while(server.stopping) {
     Thread.sleep(30)
   }
