@@ -24,9 +24,7 @@
     </developers>
     <scm>
         <connection>scm:git://github.com/btilford/maven-integration-test-helper</connection>
-        <developerConnection>
-            scm:git@github.com:btilford/maven-integration-test-helper
-        </developerConnection>
+        <developerConnection>scm:git://git@github.com:btilford/maven-integration-test-helper.git</developerConnection>
         <url>
             https://btilford@github.com/btilford/maven-integration-test-helper.git
         </url>
@@ -39,7 +37,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <groovy.version>1.7.8</groovy.version>
+        <groovy.version>1.7.9</groovy.version>
         <gmaven.version>1.3</gmaven.version>
     </properties>
 
