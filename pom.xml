@@ -23,11 +23,9 @@
         </developer>
     </developers>
     <scm>
-        <connection>scm:git://github.com/btilford/maven-integration-test-helper</connection>
-        <developerConnection>scm:git:ssh://git@github.com:btilford/maven-integration-test-helper.git</developerConnection>
-        <url>
-            https://btilford@github.com/btilford/maven-integration-test-helper.git
-        </url>
+        <connection>scm:git:ssh://github.com/btilford/${artifactId}</connection>
+        <developerConnection>scm:git:ssh://git@github.com:btilford/${artifactId}.git</developerConnection>
+        <url>https://github.com/btilford/${artifactId}</url>
     </scm>
     <issueManagement>
         <system>github</system>
