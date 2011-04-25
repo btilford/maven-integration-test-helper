@@ -23,9 +23,9 @@
         </developer>
     </developers>
     <scm>
-        <connection>scm:git:ssh://github.com/btilford/${artifactId}</connection>
-        <developerConnection>scm:git:ssh://git@github.com:btilford/${artifactId}.git</developerConnection>
-        <url>https://github.com/btilford/${artifactId}</url>
+        <connection>scm:git:ssh://github.com/btilford/${project.artifactId}</connection>
+        <developerConnection>scm:git:ssh://git@github.com/btilford/${project.artifactId}.git</developerConnection>
+        <url>https://github.com/btilford/${project.artifactId}</url>
     </scm>
     <issueManagement>
         <system>github</system>
