@@ -24,7 +24,7 @@
     </developers>
     <scm>
         <connection>scm:git://github.com/btilford/maven-integration-test-helper</connection>
-        <developerConnection>scm:git://git@github.com:btilford/maven-integration-test-helper.git</developerConnection>
+        <developerConnection>scm:git:ssh://git@github.com:btilford/maven-integration-test-helper.git</developerConnection>
         <url>
             https://btilford@github.com/btilford/maven-integration-test-helper.git
         </url>
