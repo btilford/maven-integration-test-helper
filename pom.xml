@@ -523,13 +523,13 @@
             </build>
             <distributionManagement>
                 <repository>
-                    <id>${releaseRepository.id}</id>
+                    <id>releases</id>
                     <name>Internal Releases</name>
                     <url>${releaseRepository.url}</url>
                     <layout>default</layout>
                 </repository>
                 <snapshotRepository>
-                    <id>${snapshotRepository.id}</id>
+                    <id>snapshots</id>
                     <name>Internal Snapshots</name>
                     <url>${snapshotRepository.url}</url>
                     <layout>default</layout>
