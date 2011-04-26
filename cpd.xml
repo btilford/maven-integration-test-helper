@@ -1,3 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
+<duplication lines="7" tokens="104">
+<file line="14" path="/home/btilford/work/maven-integration-test-helper/target/checkout/target/generated-sources/groovy-stubs/main/integration/helper/ScriptRunner.java"/>
+<file line="14" path="/home/btilford/work/maven-integration-test-helper/target/checkout/target/generated-sources/groovy-stubs/main/integration/helper/Util.java"/>
+<codefragment>
+<![CDATA[
+() {}
+public  groovy.lang.MetaClass getMetaClass() { return (groovy.lang.MetaClass)null;}
+public  void setMetaClass(groovy.lang.MetaClass mc) { }
+public  java.lang.Object invokeMethod(java.lang.String method, java.lang.Object arguments) { return null;}
+public  java.lang.Object getProperty(java.lang.String property) { return null;}
+public  void setProperty(java.lang.String property, java.lang.Object value) { }
+public static  groovy.lang.Binding createBinding(org.apache.maven.project.MavenProject project, org.apache.maven.plugin.logging.Log log) { return (groovy.lang.Binding)null;}
+]]>
+</codefragment>
+</duplication>
 </pmd-cpd>
