@@ -1,6 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>maven-integration-test-helper</groupId>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <groupId>com.github.maven.mojos</groupId>
     <artifactId>maven-integration-test-helper</artifactId>
     <packaging>maven-plugin</packaging>
     <version>1.0-M2-SNAPSHOT</version>
@@ -10,6 +16,13 @@
         A maven plugin that allows running pre and post test suite groovy
         scripts.
     </description>
+    <licenses>
+        <license>
+          <name>The Apache Software License, Version 2.0</name>
+          <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+          <distribution>repo</distribution>
+        </license>
+    </licenses>
     <developers>
         <developer>
             <id>btilford</id>
@@ -33,7 +46,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <groovy.version>1.7.9</groovy.version>
+        <groovy.version>1.8.0</groovy.version>
         <gmaven.version>1.3</gmaven.version>
     </properties>
 
@@ -463,7 +476,7 @@
                                   <!--<report>mailing-list</report>-->
                                   <report>cim</report>
                                   <report>issue-tracking</report>
-                                  <!--<report>license</report>-->
+                                  <report>license</report>
                                   <report>scm</report>
                                 </reports>
                               </reportSet>
