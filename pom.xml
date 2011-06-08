@@ -533,18 +533,6 @@
                 </plugins>
             </build>
             <distributionManagement>
-                <repository>
-                    <id>releases</id>
-                    <name>Internal Releases</name>
-                    <url>${releaseRepository.url}</url>
-                    <layout>default</layout>
-                </repository>
-                <snapshotRepository>
-                    <id>snapshots</id>
-                    <name>Internal Snapshots</name>
-                    <url>${snapshotRepository.url}</url>
-                    <layout>default</layout>
-                </snapshotRepository>
                 <site>
                     <id>github</id>
                     <url>gitsite:git@github.com/btilford/maven-integration-test-helper.git</url>
