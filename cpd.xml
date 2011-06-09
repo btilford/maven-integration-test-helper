@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
 <duplication lines="7" tokens="104">
-<file line="14" path="/home/btilford/work/maven-integration-test-helper/target/checkout/target/generated-sources/groovy-stubs/main/integration/helper/ScriptRunner.java"/>
-<file line="14" path="/home/btilford/work/maven-integration-test-helper/target/checkout/target/generated-sources/groovy-stubs/main/integration/helper/Util.java"/>
+<file line="14" path="/home/btilford/workspace/maven-integration-test-helper/target/checkout/target/generated-sources/groovy-stubs/main/integration/helper/ScriptRunner.java"/>
+<file line="14" path="/home/btilford/workspace/maven-integration-test-helper/target/checkout/target/generated-sources/groovy-stubs/main/integration/helper/Util.java"/>
 <codefragment>
 <![CDATA[
 () {}

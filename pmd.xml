@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2011-04-25T18:31:14.881">
-<file name="/home/btilford/work/maven-integration-test-helper/target/checkout/src/main/java/integration/helper/PostIntegrationTestMojo.java">
+<pmd version="4.2.5" timestamp="2011-06-08T17:55:59.093">
+<file name="/home/btilford/workspace/maven-integration-test-helper/target/checkout/src/main/java/integration/helper/PostIntegrationTestMojo.java">
 <violation beginline="33" endline="33" begincolumn="30" endcolumn="42" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="integration.helper" class="PostIntegrationTestMojo" variable="projectHelper" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'projectHelper'.
 </violation>
@@ -8,7 +8,7 @@ Avoid unused private fields such as 'projectHelper'.
 Avoid unused private fields such as 'sourceRoots'.
 </violation>
 </file>
-<file name="/home/btilford/work/maven-integration-test-helper/target/checkout/src/main/java/integration/helper/PreIntegrationTestMojo.java">
+<file name="/home/btilford/workspace/maven-integration-test-helper/target/checkout/src/main/java/integration/helper/PreIntegrationTestMojo.java">
 <violation beginline="33" endline="33" begincolumn="30" endcolumn="42" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="integration.helper" class="PreIntegrationTestMojo" variable="projectHelper" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
 Avoid unused private fields such as 'projectHelper'.
 </violation>
@@ -16,12 +16,12 @@ Avoid unused private fields such as 'projectHelper'.
 Avoid unused private fields such as 'sourceRoots'.
 </violation>
 </file>
-<file name="/home/btilford/work/maven-integration-test-helper/target/checkout/target/generated-sources/groovy-stubs/main/integration/helper/ScriptRunner.java">
+<file name="/home/btilford/workspace/maven-integration-test-helper/target/checkout/target/generated-sources/groovy-stubs/main/integration/helper/ScriptRunner.java">
 <violation beginline="3" endline="3" begincolumn="1" endcolumn="19" rule="DontImportJavaLang" ruleset="Import Statement Rules" package="integration.helper" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#DontImportJavaLang" priority="4">
 Avoid importing anything from the package 'java.lang'
 </violation>
 </file>
-<file name="/home/btilford/work/maven-integration-test-helper/target/checkout/target/generated-sources/groovy-stubs/main/integration/helper/Util.java">
+<file name="/home/btilford/workspace/maven-integration-test-helper/target/checkout/target/generated-sources/groovy-stubs/main/integration/helper/Util.java">
 <violation beginline="3" endline="3" begincolumn="1" endcolumn="19" rule="DontImportJavaLang" ruleset="Import Statement Rules" package="integration.helper" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#DontImportJavaLang" priority="4">
 Avoid importing anything from the package 'java.lang'
 </violation>
